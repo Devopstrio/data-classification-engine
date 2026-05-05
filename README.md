@@ -4,17 +4,16 @@
 
 <h1>Data Classification Engine</h1>
 
-<p><strong>The Strategic Intelligence Platform for Unified Data Discovery, PII/PHI/PCI Classification, and Continuous Privacy Governance</strong></p>
+<p><strong>The Institutional-Grade Platform for Standardized Data Privacy Foundations, Classification Governance, and Multi-Cloud Discovery Ecosystems.</strong></p>
 
-[![Security: Data--Protection](https://img.shields.io/badge/Security-Data--Protection-red.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Privacy: AI--Assisted](https://img.shields.io/badge/Privacy-AI--Assisted-green.svg?style=for-the-badge&labelColor=000000)]()
-[![Governance: Cross--Cloud](https://img.shields.io/badge/Governance-Cross--Cloud-ff69b4?style=for-the-badge&labelColor=000000)]()
+[![Standard: Privacy-Excellence](https://img.shields.io/badge/Standard-Privacy--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Secure--Privacy--Orchestration](https://img.shields.io/badge/Focus-Secure--Privacy--Orchestration-indigo.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
-> **"You cannot protect what you do not know."** 
-> Data Classification Engine is an industrial-grade platform designed to discover, classify, and label sensitive data across the entire enterprise estate—from multi-cloud lakes to SaaS silos and endpoints.
+> **"Industrializing data privacy to automate classification foundations."** 
+> **Data Classification Engine** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global data privacy operations. It orchestrates the complex lifecycle of data discovery—from multi-modal PII/PHI detection and automated labeling to high-throughput metadata sync and unified privacy auditing.
 
 </div>
 
@@ -22,590 +21,263 @@
 
 ## 🏛️ Executive Summary
 
-**Data Classification Engine** is a flagship data protection platform designed for CISOs, Privacy Officers, and Governance Leaders. In a world of evolving regulations (GDPR, CCPA, HIPAA), the ability to accurately identify and govern sensitive data is a critical requirement for risk management and operational compliance.
+Fragmented data estates and manual privacy classification are strategic operational liabilities; lack of a standardized classification engine is a primary barrier to organizational engineering maturity. Organizations fail to secure their sensitive data not because of a lack of encryption, but because of fragmented discovery standards, lack of automated metadata validation, and an inability to orchestrate privacy planes with operational precision.
 
-This platform provides a **Unified Classification Control Plane** that leverages regex-based patterns, NLP entity recognition, and machine learning models to identify PII, PHI, PCI, and Intellectual Property. It automates the **Discovery Lifecycle** across **Azure**, **AWS**, **GCP**, **Microsoft 365**, and modern data platforms like **Snowflake** and **Databricks**, providing actionable executive dashboards and automated remediation workflows.
-
----
-
-## 💡 Why Data Classification Matters
-
-Data sprawl is the silent killer of enterprise security and privacy posture.
-- **Regulatory Pressure**: Massive fines for failing to identify and protect sensitive citizen data.
-- **Data Sprawl**: Sensitive information hiding in unstructured "Shadow Data" (PDFs, Emails, spreadsheets).
-- **Informed Access Control**: You can only apply the correct RBAC/ABAC policies if you know the sensitivity of the resource.
-- **Retention Governance**: Enforcing deletion or archiving policies requires knowing what the data actually represents.
+This platform provides the **Privacy Intelligence Plane**. It implements a complete **Data-Classification-Engine-as-Code Framework**, enabling Privacy Leaders and Security teams to manage global discovery foundations as first-class citizens. By automating the identification of sensitive data bottlenecks through real-time telemetry analysis and orchestrating the provisioning of secure performance-driven classification policies, we ensure that every organizational data asset—from legacy SQL clusters to distributed cloud lakes—is classified by default, audited for history, and strictly aligned with institutional privacy frameworks.
 
 ---
 
-## 🚀 Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Privacy Impact
-- **99.9% Discovery Accuracy**: Eliminating manual tagging through AI-assisted classifiers.
-- **85% Faster DSAR Response**: Rapidly locating a subject's data across all silos for privacy requests.
-- **Proactive Risk Mitigation**: Identifying high-risk "Shadow Data" before it becomes a breach headline.
-- **Continuous Compliance**: Real-time monitoring of data residency and retention policy violations.
-
----
-
-## 🏗️ Technical Stack
-
-| Layer | Technology | Rationale |
-|---|---|---|
-| **Classification Engine** | Python / spaCy / scikit-learn | Multi-modal detection (Regex + NLP + ML Confidence Scoring). |
-| **Connector Framework** | Python / API Connectors | Universal connectivity to Cloud, SaaS, and Databases. |
-| **Backend** | FastAPI | High-performance asynchronous API for telemetry and findings. |
-| **Frontend** | React 18, Vite | Premium portal for risk heatmaps and discovery boards. |
-| **Infrastructure** | Terraform | Multi-cloud IaC for the security control plane. |
-| **Storage & Search** | PostgreSQL / OpenSearch | High-velocity metadata persistence and discovery search. |
-
----
-
-## 📐 Architecture Storytelling: 50+ Diagrams
-
-### 1. Executive High-Level Architecture
-The end-to-end journey from raw data discovery to executive reporting.
-
-```mermaid
-graph TD
-    Sources[Data Sources: M365/S3/SQL] --> Hub[Scanning Control Plane]
-    Hub --> Engine[Classification Engine]
-    Engine --> Label[Automated Labeling]
-    Label --> Store[(Metadata Inventory)]
-    Store --> UI[Executive UI]
-    UI --> Remediation[Remediation Workflow]
-```
-
-### 2. Detailed Component Topology
-The internal service boundaries and secure data processing paths.
+### 1. Principal Architecture: Global Data Classification Engine & Privacy Intelligence Plane
+This diagram illustrates the end-to-end flow from discovery telemetry ingestion and multi-cloud orchestration to classification enforcement, performance validation, and institutional privacy auditing.
 
 ```mermaid
 graph LR
-    subgraph "Classification Control Plane"
-        Portal[Executive UI]
-        API[Governance API]
-        Worker[Scan Worker]
+    %% Subgraph Definitions
+    subgraph DiscoveryIngress["Estate & Discovery Ingress"]
+        direction TB
+        Cloud_Storage["S3 / ADLS / GCS Buckets"]
+        Databases["SQL / Snowflake / Databricks"]
+        SaaS_Silos["M365 / Salesforce / Slack"]
     end
-    subgraph "Data Tier"
-        DB[(PostgreSQL)]
-        Search[(OpenSearch)]
-        Cache[(Redis)]
+
+    subgraph IntelligenceEngine["Privacy Intelligence Hub"]
+        direction TB
+        API["FastAPI Discovery Gateway"]
+        ClassifierOrchestrator["Global PII & PHI Hub"]
+        Governance_Hub["Compliance & Guardrail Hub"]
+        AIOps_Validator["Drift & Risk Analysis Hub"]
     end
-    Portal --> API
-    API --> DB
-    API --> Search
-    Worker --> Cache
-```
 
-### 3. Frontend to Backend Request Path
-Tracing a request to view a "PII Discovery Report" through the platform.
+    subgraph OperationsPlane["Distributed Discovery Ecosystem"]
+        direction TB
+        ManagedClassifiers["Managed Standardized NLP Classifiers"]
+        ActivePipelines["Managed Automated Scan Pipelines"]
+        InventorySinks["Managed Infrastructure Delivery Hubs"]
+    end
 
-```mermaid
-sequenceDiagram
-    participant CISO as CISO / Privacy Lead
-    participant W as React UI
-    participant A as FastAPI
-    participant E as Classification Engine
+    subgraph OperationsHub["Institutional Data Hub"]
+        direction TB
+        Scorecard["Privacy Maturity Scorecard"]
+        Analytics["Discovery Flow & Accuracy Velocity Stats"]
+        Audit["Forensic Discovery Metadata Lake"]
+    end
+
+    subgraph DevOps["Data-Classification-Engine-as-Code Framework"]
+        direction TB
+        TF["Terraform Privacy Modules"]
+        DriftBot["Productivity & Config Drift Validator"]
+        ChatOps["Measurement Operations Hub"]
+    end
+
+    %% Flow Arrows
+    DiscoveryIngress -->|1. Submit Metadata| API
+    API -->|2. Orchestrate Discovery| ClassifierOrchestrator
+    ClassifierOrchestrator -->|3. Apply Privacy Guard| Governance_Hub
+    Governance_Hub -->|4. Assess Drift| AIOps_Validator
     
-    CISO->>W: Select "S3 Risk Heatmap"
-    W->>A: GET /classifications/summary?source=s3
-    A->>E: Fetch Aggregated Findings
-    E-->>A: JSON Result (1420 PII Matches)
-    A-->>W: Render Risk Heatmap
-    W->>W: Update UI Charts
+    AIOps_Validator -->|5. Execute Classification| OperationsPlane
+    OperationsPlane -->|6. Notify Status| ChatOps
+    API -->|7. Visualize Health| Scorecard
+    
+    Scorecard -->|8. Track Maturity| Analytics
+    Scorecard -->|9. Record Performance| Audit
+    
+    TF -->|10. Provision Backbone| IntelligenceEngine
+    DriftBot -->|11. Inject Friction Risk| ClassifierOrchestrator
+    Audit -->|12. Improve Operations| ManagedClassifiers
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e8eaf6,stroke:#1a237e,stroke-width:2px;
+    classDef operations fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+
+    class DiscoveryIngress ingress;
+    class IntelligenceEngine intel;
+    class OperationsPlane operations;
+    class OperationsHub ops;
+    class DevOps devops;
 ```
 
-### 4. Multi-Source Scanning Control Plane
-Managing the lifecycle of distributed scanning across the enterprise.
-
-```mermaid
-graph TD
-    Hub[Central Hub] --> Node_Cloud[Cloud Scanner: S3/Blob]
-    Hub --> Node_SaaS[SaaS Scanner: M365]
-    Hub --> Node_DB[DB Scanner: SQL/SF]
-    Node_Cloud --> Queue[Redis Job Queue]
-```
-
-### 5. Connector Topology
-Standardizing the connection to diverse data silos.
-
-```mermaid
-graph LR
-    Engine[Engine] --> Auth[Secrets / Key Vault]
-    Auth --> API[Connector Interface]
-    API --> SourceA[M365]
-    API --> SourceB[Snowflake]
-    API --> SourceC[AWS S3]
-```
-
-### 6. Regional Deployment Model
-Hosting the classification engine for global data sovereignty.
-
-```mermaid
-graph TD
-    GTM[Global Traffic Manager] --> EastUS[East US: Primary Control]
-    GTM --> WestEurope[West Europe: Privacy Node]
-    EastUS --> DB_Primary[(Global Metadata DB)]
-```
-
-### 7. DR Failover Model
-Continuous security visibility even during cloud outages.
+### 2. The Discovery Lifecycle Flow
+The continuous path of a data classification platform from initial integration (inventory) and aggregation (scan) to active analysis (classify), optimization (label), and institutional forensic auditing (scorecard).
 
 ```mermaid
 graph LR
-    Primary[Active Node] -->|Replication| Secondary[Standby Node]
-    Secondary -->|Health Probe| Primary
-    Primary --> Failover{System Down?}
-    Failover -->|Yes| Secondary
+    Integrate["Integrate (Inventory)"] --> Aggregate["Aggregate (Scan)"]
+    Aggregate --> Analyze["Analyze (Classify)"]
+    Analyze --> Optimize["Optimize (Label)"]
+    Optimize --> Report["Report & Scorecard"]
 ```
 
-### 8. API Gateway Architecture
-Securing and throttling the entry point for security intelligence.
-
-```mermaid
-graph TD
-    Req[Incoming Security Event] --> Auth[OIDC / Entra ID]
-    Auth --> WAF[Web App Firewall]
-    WAF --> Router[Path Router]
-```
-
-### 9. Queue Worker Architecture
-Managing the heavy lifting of multi-terabyte data scanning.
+### 3. Distributed Classification Topology
+Strategically orchestrating standardized discovery across global data regions, diverse cloud architectures, and multi-cloud targets, providing a unified institutional view of global privacy health and operational readiness.
 
 ```mermaid
 graph LR
-    Scan[New Scan Job] --> Redis[Redis Job Queue]
-    Redis --> W1[Worker Alpha: NLP]
-    Redis --> W2[Worker Beta: Regex]
-    W1 --> Result[Update Findings Store]
+    RegionA["Edge: US West (Primary) Ingress"] -->|Sync| Hub["Unified Data Hub"]
+    BU["Hub: EU Central (Secondary) Hub"] -->|Sync| Hub
+    Cloud["Site: Multi-Cloud (Azure/AWS) SaaS"] -->|Sync| Hub
+    Hub --- Logic["Global Discovery Engine"]
 ```
 
-### 10. Dashboard Analytics Flow
-How raw classification signals become executive risk scorecards.
+### 4. Classification Governance & High-Trust Data Plane Protection Flow
+Executing complex logic for securing the bridge between data owners and privacy teams, ensuring every organizational identity is verified, data-at-rest is protected, and every classification access is according to institutional standards.
 
 ```mermaid
 graph TD
-    Raw[Raw Scan JSON] --> Parser[Findings Parser]
-    Parser --> Scorer[Risk Scorer]
-    Scorer --> Dashboard[Executive UI]
+    ClassificationData["Usage: Finding & Risk Data"] --> Bridge["Rule: Guardrail Hub"]
+    Bridge --> PolicyMap["Rule: Security & Policy Map"]
+    PolicyMap -->|Evaluate| Context["PATH: Global Privacy View"]
+    Context --- Estimate["Discovery Integrity Score"]
 ```
 
-### 11. Structured DB Scan Workflow
-Sampling and classifying rows in relational databases.
+### 5. Multi-Cloud Classification Federation & Governance Flow
+Automatically managing unified discovery standards across global regions and diverse cloud tenants, ensuring institutional data residency and privacy boundaries by default.
 
 ```mermaid
 graph LR
-    DB[PostgreSQL] --> Sample[Sample 1% Rows]
-    Sample --> Classify[Classifier Hub]
-    Classify --> Result[Column Level Tags]
+    Org["Global Modernization System"] -->|Apply| Guard["Governance Isolation Hub"]
+    Guard -->|Violate| Alert["Discovery Latency Alert"]
+    Guard -->|Pass| Verify["Status: Governed Privacy"]
+    Verify --- Audit["Isolation Compliance Log"]
 ```
 
-### 12. Unstructured File Scan Lifecycle
-Deep inspection of documents and archives.
-
-```mermaid
-graph TD
-    File[PDF / Docx] --> Extract[Text Extraction]
-    Extract --> NLP[NLP Classifier]
-    NLP --> Match[Sensitive Pattern]
-    Match --> Label[Apply Sensitivity Label]
-```
-
-### 13. Email / M365 Scan Flow
-Securing communication and collaboration silos.
+### 6. Encryption & Perimeter Protection Flow (Privacy Standard)
+Managing the lifecycle of a classification request, automatically enforcing institutional TLS 1.3 and resource encryption standards as required by security policy, ensuring zero-latency security confidence.
 
 ```mermaid
 graph LR
-    M365[Exchange / SharePoint] --> Graph[Graph API]
-    Graph --> Parser[Message Parser]
-    Parser --> Score[Risk Score]
+    ClassificationReq["Privacy Access Query"] -->|Check| Gatekeeper["Discovery Protection Bot"]
+    Gatekeeper -->|Verify| TLS["TLS 1.3 & Resource Encryption Check"]
+    TLS -->|Pass| Admit["Status: Secure Privacy Traffic"]
+    Admit --- Audit["Security Compliance Log"]
 ```
 
-### 14. Data Lake Discovery Model
-Scanning petabyte-scale storage buckets.
+### 7. Institutional Classification Maturity Scorecard
+Grading organizational performance based on key indicators: Discovery Coverage Index, Classification Accuracy Index, and Remediation Adoption Scores.
 
 ```mermaid
 graph TD
-    S3[S3 Bucket] --> Catalog[Asset Discovery]
-    Catalog --> Sample[Intelligent Sampling]
-    Sample --> Index[Search Index Update]
+    Post["Privacy Health: 99%"] --> Risk["Delivery Gap: 1%"]
+    Post --- C1["Coverage Index (100%)"]
+    Post --- C2["Accuracy Adoption (98%)"]
 ```
 
-### 15. Regex Classifier Pipeline
-High-speed pattern matching for standard identifiers.
+### 8. Identity & RBAC for Privacy Governance
+Managing fine-grained access to discovery hubs, provisioning workers, and audit logs between CISOs, Privacy Officers, and SREs.
+
+```mermaid
+graph TD
+    CISO["CISO"] --> Hub["Manage Organization rules"]
+    Officer["Privacy Officer"] --> Exec["Execute scan policies"]
+    SRE["Platform SRE"] --> Audit["Verify Discovery Proofs"]
+```
+
+### 9. IaC Deployment: Data-Classification-Engine-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the discovery tracking hubs, classifier protection workers, and forensic metadata lakes.
 
 ```mermaid
 graph LR
-    Raw[Raw Text] --> Regex[CC / SSN / Email]
-    Regex --> Verify[Checksum Validate]
-    Verify --> Confirmed[Valid PII]
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Privacy Control Plane"]
+    Engine --> Clusters["HA Validation Fleet"]
 ```
 
-### 16. NLP Entity Detection Workflow
-Context-aware classification for complex entities.
-
-```mermaid
-graph TD
-    Text[Contextual Text] --> spaCy[spaCy NER Model]
-    spaCy --> Entity[Person / Org / GPE]
-    Entity --> Score[Confidence Score]
-```
-
-### 17. ML Confidence Scoring Flow
-Reducing false positives through probabilistic modeling.
+### 10. AIOps Classification Drift & Risk Validation Flow
+Using advanced analytics to identify sudden surges in discovery volume, unauthorized classifier changes, suspicious configuration drifts, or unusual delivery pattern changes that could result in institutional risk or data exposure.
 
 ```mermaid
 graph LR
-    Match[Potential Match] --> ML[ML Classifier]
-    ML --> Confidence[> 95% Confidence?]
-    Confidence -->|Yes| Alert[Critical Alert]
+    Drift["Delivery Change Event"] --> Analyzer["Drift Detection Bot"]
+    Analyzer -->|Anomaly| Alert["Discovery Integrity Alert"]
+    Analyzer -->|Normal| Pass["Status Optimal"]
 ```
 
-### 18. Label Assignment Lifecycle
-Synchronizing classification to downstream security tools.
-
-```mermaid
-graph TD
-    Match[Classified Asset] --> Policy[Labeling Policy]
-    Policy --> M365_Label[MIP Label]
-    Policy --> DB_Tag[SQL Sensitivity Tag]
-```
-
-### 19. Reclassification Workflow
-Updating state when data or policies change.
+### 11. Metadata Lake for Forensic Privacy Audit
+Storing long-term records of every discovery integration event (metadata), every scan executed, and every classification history for institutional record-keeping, compliance auditing, and post-provisioning forensics.
 
 ```mermaid
 graph LR
-    Event[File Modified] --> Trigger[Re-scan]
-    Trigger --> Classify[Classify Engine]
-    Classify --> Update[Update Label]
-```
-
-### 20. False Positive Review Model
-Human-in-the-loop validation for edge cases.
-
-```mermaid
-graph TD
-    Match[Suspect Match] --> Review[Steward Queue]
-    Review -->|True| Confirm[Confirm Finding]
-    Review -->|False| Whitelist[Add to Whitelist]
-```
-
-### 21. Data Owner Attribution Flow
-Identifying the accountable party for sensitive data.
-
-```mermaid
-graph LR
-    Asset[Sensitive Asset] --> Metadata[Creation Metadata]
-    Metadata --> LDAP[Azure AD / LDAP]
-    LDAP --> Owner[Assigned Owner]
-```
-
-### 22. Retention Policy Mapping
-Determining how long data should be kept based on classification.
-
-```mermaid
-graph TD
-    Type[PII: Finance] --> Policy[7 Year Retention]
-    Policy --> Deadline[Set Deletion Date]
-```
-
-### 23. Residency Requirement Model
-Enforcing data sovereignty rules.
-
-```mermaid
-graph LR
-    Location[Region: EU] --> Policy[GDPR Localization]
-    Policy --> Audit[Residency Check]
-```
-
-### 24. Access Risk Scoring Workflow
-Quantifying risk based on sensitivity and permissions.
-
-```mermaid
-graph TD
-    Sens[Sensitivity: High] --> Calc[Risk Engine]
-    Perms[Access: Public] --> Calc
-    Calc --> Score[Critical Risk]
-```
-
-### 25. DLP Integration Architecture
-Feeding classification intelligence into prevention tools.
-
-```mermaid
-graph LR
-    Engine[Classification Engine] --> API[DLP API]
-    API --> Firewall[Block Egress]
-```
-
-### 26. Privacy Incident Workflow
-Responding to unauthorized sensitive data exposure.
-
-```mermaid
-graph TD
-    Alert[Sensitive Exposure] --> IR[Incident Response]
-    IR --> Contain[Isolate Resource]
-```
-
-### 27. DSAR Support Model
-Automating the "Right to be Forgotten" and "Right to Access".
-
-```mermaid
-graph LR
-    Req[DSAR Request] --> Search[Global PII Search]
-    Search --> Report[Subject Data Export]
-```
-
-### 28. Consent Mapping Flow
-Aligning data usage with user preferences.
-
-```mermaid
-graph TD
-    User[Subject] --> Consent[Marketing Opt-in]
-    Consent --> Map[Tag: Marketing-Allowed]
-```
-
-### 29. Legal Hold Lifecycle
-Protecting data from deletion during litigation.
-
-```mermaid
-graph LR
-    Case[Legal Case] --> Apply[Apply Legal Hold]
-    Apply --> Lock[Block Deletion]
-```
-
-### 30. Deletion Workflow
-Securely purging data at the end of its lifecycle.
-
-```mermaid
-graph TD
-    Expire[Retention Met] --> Approval[Owner Approval]
-    Approval --> Purge[Wipe Resource]
-```
-
-### 31. SQL Database Connector Flow
-Deep inspection for relational systems.
-
-```mermaid
-graph LR
-    SQL[SQL Server] --> Metadata[Schema Metadata]
-    Metadata --> Sample[Row Sample]
-```
-
-### 32. Blob/Object Storage Scan Model
-Scalable scanning for unstructured lakes.
-
-```mermaid
-graph TD
-    S3[S3 / Blob] --> Event[New Object Event]
-    Event --> Worker[Scan Worker]
-```
-
-### 33. SharePoint Connector Workflow
-Securing the collaboration perimeter.
-
-```mermaid
-graph LR
-    SP[SharePoint] --> Site[Site Crawler]
-    Site --> Doc[Document Classify]
-```
-
-### 34. Salesforce Connector Flow
-Classifying customer data in CRM silos.
-
-```mermaid
-graph TD
-    SFDC[Salesforce] --> Object[Contact / Lead API]
-    Object --> Classify[PII Detector]
-```
-
-### 35. Snowflake Connector Model
-Governance for the modern data warehouse.
-
-```mermaid
-graph LR
-    SF[Snowflake] --> Query[Select Samples]
-    Query --> Tag[SET TAG Sensitivity='High']
-```
-
-### 36. Databricks Connector Workflow
-Classifying data in the lakehouse.
-
-```mermaid
-graph TD
-    Unity[Unity Catalog] --> Delta[Delta Lake Scan]
-    Delta --> Metadata[Update Unity Tags]
-```
-
-### 37. Fabric Connector Flow
-Unified governance for the Microsoft data fabric.
-
-```mermaid
-graph LR
-    OneLake[OneLake] --> Purview[Purview Scan]
-    Purview --> Hub[Classification Hub]
-```
-
-### 38. Streaming Classification Pipeline
-Real-time discovery for high-velocity data.
-
-```mermaid
-graph TD
-    Kafka[Kafka Stream] --> Consumer[Streaming Classifier]
-    Consumer --> Alert[Immediate PII Alert]
-```
-
-### 39. API Ingestion Model
-Allowing external systems to push data for classification.
-
-```mermaid
-graph LR
-    Ext[External App] --> API[Classification API]
-    API --> Sync[Immediate Scan]
-```
-
-### 40. Batch Scheduler Lifecycle
-Managing periodic enterprise-wide re-scans.
-
-```mermaid
-graph TD
-    Schedule[Monthly Scan] --> Trigger[Inventory Full Scan]
-    Trigger --> Report[Compliance Update]
-```
-
-### 41. OIDC / SSO Auth Flow
-Securing the classification portal.
-
-```mermaid
-sequenceDiagram
-    User->>Portal: Login
-    Portal->>AzureAD: Auth
-    AzureAD-->>User: Token
-```
-
-### 42. RBAC Model
-Granular permissions for security analysts and stewards.
-
-```mermaid
-graph TD
-    Admin[Sec Admin] --> All[Full Control]
-    Analyst[Privacy Analyst] --> View[View Findings]
-```
-
-### 43. Secrets Management Flow
-Securing the credentials for 50+ data sources.
-
-```mermaid
-graph LR
-    Secret[DB Password] --> Vault[Azure Key Vault]
-    Vault --> Connector[DB Connector]
-```
-
-### 44. Audit Logging Architecture
-Immutable records of all classification decisions.
-
-```mermaid
-graph TD
-    Decision[Classified as PII] --> Log[Immutable Store]
-```
-
-### 45. Metrics Pipeline
-Monitoring scanning performance and accuracy.
-
-```mermaid
-graph LR
-    Engine[Scan Engine] --> Prom[Prometheus]
-    Prom --> Grafana[Security Board]
-```
-
-### 46. Logging Architecture
-Centralized logs for distributed scanning nodes.
-
-```mermaid
-graph TD
-    NodeA[AWS Node] --> Loki[Grafana Loki]
-    NodeB[Azure Node] --> Loki
-```
-
-### 47. Tracing Model
-Distributed tracing for multi-service scan requests.
-
-```mermaid
-sequenceDiagram
-    Portal->>API: Trigger Scan
-    API->>Worker: Run Classifier
-```
-
-### 48. SLA Monitoring Flow
-Guaranteeing classification freshness and availability.
-
-```mermaid
-graph LR
-    Stale[Asset > 30 Days] --> Alert[Compliance Breach]
-```
-
-### 49. Release Pipeline Workflow
-Continuous delivery of the classification platform.
-
-```mermaid
-graph LR
-    Git[Code Push] --> GHA[CI/CD]
-    GHA --> AKS[Deploy Cluster]
-```
-
-### 50. Change Governance Workflow
-Governing updates to the classification taxonomy.
-
-```mermaid
-graph TD
-    Prop[New Rule] --> Board[Privacy Board]
-    Board --> Approve[Deploy to Engine]
+    Provision["Sync Interaction Event"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Privacy Metadata Lake"]
+    Lake --> Trends["Discovery Efficiency Trends"]
 ```
 
 ---
 
-## 🔬 Data Classification & Privacy Education
+## 🏛️ Core Governance Pillars
 
-### 1. The Classification Taxonomy
-Our engine uses a multi-tier taxonomy to ensure granular governance:
-- **Level 1: Public** (Non-sensitive corporate info)
-- **Level 2: Internal** (Internal-only business data)
-- **Level 3: Confidential** (Sensitive business/customer info)
-- **Level 4: Restricted** (PII, PHI, PCI, or IP)
-
-### 2. Regulatory Alignment
-The platform is pre-configured with rulesets for:
-- **GDPR**: EU citizen identifiers and residency.
-- **CCPA / CPRA**: California consumer privacy.
-- **HIPAA**: Protected Health Information (PHI).
-- **PCI-DSS**: Credit card and financial identifiers.
+1.  **Unified Foundation Coordination**: Maximizing resilience by centralizing all discovery measurement through a single institutional plane.
+2.  **Automated Privacy Provisioning**: Eliminating "manual labeling" scenarios through proactive orchestration and pattern verification.
+3.  **Sequential Scan Intelligence**: Ensuring zero-interruption operations through dependency-aware scan-driven data engineering.
+4.  **Zero-Trust Identity Protection**: Automatically enforcing identity-based access, data-at-rest encryption, and policy evaluation across all privacy tiers.
+5.  **Autonomous Operations Logic**: Guaranteeing reliability through automated industry-specific effectiveness monitoring runbooks.
+6.  **Full Discovery Auditability**: Immutable recording of every classification change and discovery provision for institutional forensics.
 
 ---
 
-## 🚦 Getting Started
+## 🛠️ Technical Stack & Implementation
 
-### 1. Prerequisites
-- **Terraform** (v1.5+).
-- **Docker Desktop**.
-- **Python 3.11+**.
+### Privacy Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Performance Engine**: Custom Python-based logic for multi-modal NLP discovery and DORA-style privacy metrics.
+*   **Integrations**: Native connectors for S3, Blob, SQL, Snowflake, and Databricks.
+*   **Persistence**: PostgreSQL (Privacy Ledger) and Redis (Live Scan State).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege privacy management access.
 
-### 2. Local Setup
+### Governance Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Slate, Indigo (Modern high-fidelity productivity aesthetic).
+*   **Visualization**: D3.js for discovery topologies and Recharts for accuracy velocity analytics.
+
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS) for management plane.
+*   **Measurement Hub**: Managed event sourcing for immutable productivity timeline reconstruction.
+*   **IaC**: Modular Terraform for deploying the privacy landing zone and validation fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/privacy_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/enforcers`** | Distributed discovery provisioners | Azure, AWS, GCP APIs |
+| **`infrastructure/scan_pipes`** | Data Ingestion Hubs | Webhooks, Lambda |
+| **`infrastructure/auditing`** | Forensic modernization sinks | S3, Athena, Quicksight |
+
+---
+
+## 🚀 Deployment Guide
+
+### Local Principal Environment
 ```bash
-# Clone the repository
-git clone https://github.com/Devopstrio/data-classification-engine.git
+# Clone the Data Classification Engine repository
+git clone https://github.com/devopstrio/data-classification-engine.git
 cd data-classification-engine
 
-# Start the Discovery Hub
-docker-compose up --build
+# Configure environment
+cp .env.example .env
+
+# Launch the Privacy stack
+make init
+
+# Trigger a mock discovery update and automated guardrail validation simulation
+make simulate-classification
 ```
-Access the Privacy Dashboard at `http://localhost:3000`.
+
+Access the Management Portal at `http://localhost:3000`.
 
 ---
 
-## 🛡️ Security & Governance
-- **Zero-Copy Scanning**: We scan data in-place whenever possible. Data is never moved to the engine's storage.
-- **Audit-Ready Evidence**: Every classification decision includes the rule ID, confidence score, and timestamp for audit purposes.
-- **FIPS-Compliant Encryption**: All metadata and findings are encrypted at rest and in transit.
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-<sub>&copy; 2026 Devopstrio &mdash; Engineering the Future of Data Privacy.</sub>
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
